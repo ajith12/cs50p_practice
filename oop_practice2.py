@@ -28,6 +28,12 @@ class Student:
             raise ValueError("Invalid name")
         self._name = name
 
+    @classmethod
+    def get(cls):
+        name = input("What is your name: ")
+        house = input("Where is your house: ")
+        return cls(name,house)
+
     def team(self):
         if self.name == "David Beckham":
             return "Manchester United"
@@ -37,14 +43,15 @@ class Student:
             return "None"
 
 def main():
-    student = get_student()
+    #student = get_student()
+    student = Student.get()
     print(f"{student.name} from {student.house} and their team is {student.team()}")
 
-def get_student():
-    name = input("What's your name:")
-    house = input("Where do you live?:")
+#def get_student():
+ #   name = input("What's your name:")
+  #  house = input("Where do you live?:")
     #so when instantiate the class object you have to pass name and house along here else it will throw error
-    return Student(name,house)
+  #  return Student(name,house)
 
 if __name__=="__main__":
     main()
