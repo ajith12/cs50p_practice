@@ -11,7 +11,7 @@ pdf = FPDF()
 pdf.add_page()
 pdf.set_font("helvetica", style="B", size=16)
 pdf.cell(100, 10, "Hello World!")
-pdf.cell(100, 10, "Hello World!",new_x="LMARGIN",new_y="NEXT",align="C")
+#pdf.cell(100, 10, "Hello World!",new_x="LMARGIN",new_y="NEXT",align="C")
 pdf.output("tuto1.pdf")
 
 pdf = FPDF(orientation="P", unit="mm", format="A4")
